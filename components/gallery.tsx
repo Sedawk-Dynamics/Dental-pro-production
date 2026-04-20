@@ -23,9 +23,9 @@ export function Gallery() {
       title: 'Alignment Success',
     },
     {
-      src: '/clinic-interior.jpg',
-      alt: 'Modern dental clinic',
-      title: 'Our Clinic',
+      src: '/interrior.jpeg',
+      alt: 'Patient Waiting Area',
+      title: 'Patient Waiting Area',
     },
     {
       src: '/image/7.webp',
