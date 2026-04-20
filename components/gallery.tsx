@@ -3,12 +3,12 @@
 export function Gallery() {
   const images = [
     {
-      src: '/image/1.jpg',
+      src: '/image/smile.png',
       alt: 'Before and after smile transformation',
       title: 'Smile Transformation',
     },
     {
-      src: '/image/teeth.webp',
+      src: '/image/teeth-white.png',
       alt: 'Professional teeth whitening results',
       title: 'Whitening Results',
     },

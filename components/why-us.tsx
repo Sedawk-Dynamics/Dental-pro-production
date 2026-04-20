@@ -69,7 +69,7 @@ export function WhyUs() {
           <div className="relative">
             <div className="absolute -inset-4 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl opacity-75"></div>
             <img
-              src="/clinic-interior.jpg"
+              src="/chair.jpeg"
               alt="Modern dental clinic"
               className="relative rounded-2xl shadow-2xl object-cover w-full h-96"
             />

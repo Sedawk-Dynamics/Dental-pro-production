@@ -5,29 +5,26 @@ import { Star } from 'lucide-react'
 export function Dentists() {
   const dentists = [
     {
-      name: 'Dr. Sarah Johnson',
-      specialization: 'General & Cosmetic Dentistry',
-      experience: '12 Years',
-      description: 'Specializes in cosmetic procedures and smile design.',
+      name: 'Dr. Sneha Mishra',
+      specialization: 'Primary Consultant Dentist and Root Canal Specialist',
+      description: 'Expert in advanced root canal treatments, restorative dentistry, and comprehensive oral care.',
     },
     {
-      name: 'Dr. Michael Chen',
-      specialization: 'Orthodontics & Implants',
-      experience: '10 Years',
-      description: 'Expert in dental implants and orthodontic treatments.',
+      name: 'Dr. Suhas',
+      specialization: 'OMFS and Oral Surgeon',
+      description: 'Specializes in oral and maxillofacial surgery, including tooth extractions, jaw surgeries, and dental implants.',
     },
     {
-      name: 'Dr. Emily Rodriguez',
-      specialization: 'Root Canal & Endodontics',
-      experience: '9 Years',
-      description: 'Specialized in pain-free root canal treatments.',
+      name: 'Dr. Jeff',
+      specialization: 'Orthodontist and Invisalign Expert',
+      description: 'Focused on teeth alignment, braces, and Invisalign treatments to create confident, well-aligned smiles.',
     },
   ]
 
   return (
     <section id="dentists" className="py-20 sm:py-32 bg-secondary">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
+
         {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
@@ -53,7 +50,7 @@ export function Dentists() {
                 key={index}
                 className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
               >
-                
+
                 {/* Initials Avatar */}
                 <div className="relative h-64 flex items-center justify-center bg-gradient-to-br from-primary to-accent text-white">
                   <div className="text-5xl font-bold tracking-wide">
@@ -76,15 +73,15 @@ export function Dentists() {
                   </p>
 
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-muted-foreground">
+                    {/* <span className="text-sm font-medium text-muted-foreground">
                       {dentist.experience} Experience
-                    </span>
+                    </span> */}
 
-                    <div className="flex gap-1">
+                    {/* <div className="flex gap-1">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="h-4 w-4 fill-accent text-accent" />
                       ))}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 

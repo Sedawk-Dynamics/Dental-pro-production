@@ -5,29 +5,32 @@ import { Star, Quote } from 'lucide-react'
 export function Testimonials() {
   const testimonials = [
     {
-      name: 'Priya Sharma',
-      text: 'The best dental experience I\'ve had! Dr. Sarah was so professional and made me feel comfortable. My teeth whitening results are amazing!',
+      name: 'Prashant Khare',
+      text: "We are consulting Dr. Sneha for our kid's dental treatment and the experience has been exceptional. She patiently listens to every concern, understands the situation deeply and ensures our child feels completely comfortable before any procedure. Her warmth, care, and consistent follow-ups truly reflect her commitment to her patients well-being",
       rating: 5,
-      image: '/patient-testimonial.jpg',
     },
     {
-      name: 'Raj Patel',
-      text: 'Excellent clinic with state-of-the-art equipment. My root canal treatment was painless thanks to the expert care. Highly recommended!',
+      name: 'Tanisha',
+      text: 'I had a very good experience with Dr.Sneha. She did pulpectomy for my 8 yr old son and handled everything with so much care and patience, she explained the procedure clearly and made my child feel comfortable and calm throughout the treatment. I am really grateful for her gentle approach and professionalism, highly recommended her for dental treatments.',
       rating: 5,
-      image: '/patient-testimonial.jpg',
     },
     {
-      name: 'Anjali Gupta',
-      text: 'Got dental implants done and the results are incredible. The staff is friendly and the clinic is very hygienic. Worth every penny!',
+      name: 'Radhika Pansari',
+      text: 'Dr. Sneha is a wonderful doctor. Visited her to get cap filling done for my daughter. The entire process was seamless and the way she handled my daughter was exceptional. Highly recommended for all your dental problems.',
       rating: 5,
-      image: '/patient-testimonial.jpg',
     },
     {
       name: 'Arjun Singh',
-      text: 'My orthodontic treatment was smooth and well-planned. Dr. Chen explained everything clearly and the results exceeded my expectations.',
+      text: 'I 100% recommend Dr. Sneha for her excellent dental expertise. She is highly professional, caring, and makes patients feel completely at ease. I have visited her both for myself and my kids. Her ability to connect with patients of all ages, especially kids, makes the whole experience stress-free. Truly a dependable and skilled dentist!',
       rating: 5,
-      image: '/patient-testimonial.jpg',
     },
+  ]
+
+  const colors = [
+    "bg-primary",
+    "bg-green-500",
+    "bg-blue-500",
+    "bg-purple-500",
   ]
 
   return (
@@ -50,12 +53,10 @@ export function Testimonials() {
             >
               {/* Header */}
               <div className="flex items-start justify-between mb-4">
-                <div>
-                  <div className="flex gap-1 mb-2">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-accent text-accent" />
-                    ))}
-                  </div>
+                <div className="flex gap-1">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-accent text-accent" />
+                  ))}
                 </div>
                 <Quote className="h-8 w-8 text-accent/30" />
               </div>
@@ -67,14 +68,18 @@ export function Testimonials() {
 
               {/* Author */}
               <div className="flex items-center gap-4">
-                <img
-                  src={testimonial.image || "/placeholder.svg"}
-                  alt={testimonial.name}
-                  className="h-12 w-12 rounded-full object-cover"
-                />
+                <div
+                  className={`h-12 w-12 rounded-full text-white flex items-center justify-center font-semibold text-lg ${colors[index % colors.length]}`}
+                >
+                  {testimonial.name.charAt(0).toUpperCase()}
+                </div>
                 <div>
-                  <p className="font-semibold text-primary">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">Verified Patient</p>
+                  <p className="font-semibold text-primary">
+                    {testimonial.name}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Verified Patient
+                  </p>
                 </div>
               </div>
             </div>

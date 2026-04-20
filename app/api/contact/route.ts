@@ -6,7 +6,6 @@ export async function POST(req: Request) {
 
     const { name, email, phone, service, date, time } = body
 
-    // 🔁 Convert service to readable text
     const serviceMap: Record<string, string> = {
       cleaning: "Teeth Cleaning",
       whitening: "Teeth Whitening",
@@ -17,7 +16,6 @@ export async function POST(req: Request) {
       checkup: "General Checkup",
     }
 
-    // 📩 Create transporter
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),
@@ -28,7 +26,6 @@ export async function POST(req: Request) {
       },
     })
 
-    // ✉️ Email content
     const mailOptions = {
       from: `"Dental Pro Website" <${process.env.FROM_EMAIL}>`,
       to: process.env.TO_EMAIL,
@@ -39,7 +36,9 @@ export async function POST(req: Request) {
 
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Phone:</strong> ${phone}</p>
-          <p><strong>Email:</strong> ${email}</p>
+
+          ${email ? `<p><strong>Email:</strong> ${email}</p>` : ""}
+
           <p><strong>Service:</strong> ${serviceMap[service] || service}</p>
           <p><strong>Date:</strong> ${date}</p>
           <p><strong>Time:</strong> ${time}</p>
@@ -53,7 +52,6 @@ export async function POST(req: Request) {
       `,
     }
 
-    // 🚀 Send email
     await transporter.sendMail(mailOptions)
 
     return Response.json({ success: true })

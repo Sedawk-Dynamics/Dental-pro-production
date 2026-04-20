@@ -22,7 +22,7 @@ export function Appointment() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-  
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -31,9 +31,9 @@ export function Appointment() {
         },
         body: JSON.stringify(formData),
       })
-  
+
       const data = await res.json()
-  
+
       if (data.success) {
         alert("Appointment request sent successfully!")
         setFormData({
@@ -145,14 +145,14 @@ export function Appointment() {
 
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
-                    Email *
+                    Email (Optional)
                   </label>
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    required
+
                     className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="your@email.com"
                   />
@@ -177,6 +177,8 @@ export function Appointment() {
                     <option value="rootcanal">Root Canal</option>
                     <option value="cosmetic">Cosmetic Dentistry</option>
                     <option value="checkup">General Checkup</option>
+                    <option value="Tooth-ache">Tooth Ache</option>
+                    <option value="other">Other</option>
                   </select>
                 </div>
 

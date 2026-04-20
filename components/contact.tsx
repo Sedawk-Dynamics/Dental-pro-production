@@ -32,7 +32,7 @@ export function Contact() {
               href="mailto:Sneha.mis@gmail.com "
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Sneha.mis@gmail.com 
+              Sneha.mis@gmail.com
             </a>
           </div>
 
@@ -41,26 +41,30 @@ export function Contact() {
             <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-lg bg-primary">
               <MapPin className="h-7 w-7 text-primary-foreground" />
             </div>
+
             <h3 className="text-lg font-semibold text-primary mb-2">Address</h3>
-            <p className="text-muted-foreground text-sm">
-              Survey, No 25/1A4, 3rd Floor, SGR-2<br />
-              Janatha Colony, Chikkabellandur<br />
-              Bengaluru, Karnataka 560035
-            </p>
+
+            <div className="flex justify-center">
+              <p className="text-muted-foreground text-sm text-left max-w-[250px]">
+                Survey, No 25/1A4, 3rd Floor, SGR-2<br />
+                Janatha Colony, Chikkabellandur<br />
+                Bengaluru, Karnataka 560035
+              </p>
+            </div>
           </div>
         </div>
 
         {/* Map Section */}
         <div className="rounded-2xl overflow-hidden shadow-xl mb-16">
-         <iframe
-          src="https://www.google.com/maps?q=Dental+Pro+Advance+Clinic+Bangalore&output=embed"
-          width="100%"
-          height="400"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          className="w-full"
-        />
+          <iframe
+            src="https://www.google.com/maps?q=Dental+Pro+Advance+Clinic+Bangalore&output=embed"
+            width="100%"
+            height="400"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            className="w-full"
+          />
         </div>
 
         {/* Hours & Social */}
